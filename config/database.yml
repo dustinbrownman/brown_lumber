@@ -1,0 +1,11 @@
+development:
+  adapter: postgresql
+  database: brown_lumber_development
+
+test:
+  adapter: postgresql
+  database: brown_lumber_test
+
+production:
+  adapter: postgresql
+  database: brown_lumber_production
