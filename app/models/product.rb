@@ -1,21 +1,20 @@
 class Product < ActiveRecord::Base
-	validates :name, presence: true	
+	validates :description, presence: true	
 
-	belongs_to :category
+	belongs_to :sub_category
 
 	def self.import(csv)
 		CSV.foreach(csv.path, headers: true) do |row|
 			product_hash = row.to_hash.symbolize_keys
-			category_name = product_hash[:category]
-			subcategory_name = product_hash[:subcategory]
+			sub_category_name = product_hash[:sub_category]
+			main_category_name = product_hash[:main_category]
 
-			#Wait, the category that a product belongs to is the sub_category!
-
-			product_hash[:category] = Category.find_or_create_by(name: category_name) do |category|
-				category.subcategory = Category.find_or_create_by(name: subcategory_name) { |sub| sub.number = product_hash[:cat_num] }
+			product_hash[:sub_category] = SubCategory.find_or_create_by(name: sub_category_name) do |sub_category|
+				sub_category.number = product_hash[:category_number]
+				sub_category.main_category = MainCategory.find_or_create_by(name: main_category_name)
 			end
 
-
+			Product.create(product_hash.except(:main_category, :number, :picture))
 		end
 	end
 end
