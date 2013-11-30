@@ -8,6 +8,7 @@ gem 'coffee-rails'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder'
+gem 'bootstrap-sass', "~> 3.0.2.1"
 
 group :development, :test do
   gem 'rspec-rails'
