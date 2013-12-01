@@ -15,6 +15,7 @@ html, body {
 	height: 100%;
 }
 
+/* Shadow at the top of browser window */
 body:before {
   content: "";
   position: fixed;
@@ -53,7 +54,7 @@ body:before {
 	border-top: 3px solid $silver;
 	padding-top: 10px;
 	margin-top: 20px;
-	height: 100%;
+	height: 50%;
 
 	p {
 		@extend .text-muted;
@@ -62,6 +63,7 @@ body:before {
 
 .content {
   @include make-row();
+  height: 100%;
 
   .prominent {
   	img {
@@ -73,4 +75,35 @@ body:before {
   .aside {
   	@include make-lg-column(5);
   };	
+}
+
+.sidebar {
+	@include make-md-column(2);
+	background-color: $clouds;
+	height: 700px;
+}
+
+.main-categories-list {
+	@include make-md-column(10);
+	padding-top: 0px;
+}
+
+.category-thumbnail {
+	@include make-md-column(4);
+	float: left;
+
+	div.inner {
+		@extend .thumbnail;
+		border-radius: 0;
+		vertical-align: bottom;
+
+		img {
+			@extend .img-responsive;
+		};
+
+		h3 {
+			display: inline-block;
+			margin: 5px 0 0 0;
+		}
+	}
 }

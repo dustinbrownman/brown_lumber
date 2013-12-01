@@ -1,0 +1,16 @@
+<div class="sidebar">
+	<h4>Categories</h4>
+</div>
+
+<div class="main-categories-list">
+	<div class="row">
+	<% @main_categories.each do |main_category| %>
+		<div class="category-thumbnail">
+			<div class="inner">
+				<%= image_tag "http://placehold.it/300x150" %>
+				<h3><%= main_category.name %></h3>
+			</div>
+		</div>
+	<% end %>
+	</div>
+</div>
