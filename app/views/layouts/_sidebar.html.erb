@@ -1,0 +1,13 @@
+<div class="sidebar">
+	<h4>Categories</h4>
+	<ul>
+		<% categories.each do |category| %>
+			<li><%= link_to category.name, category %></li>
+			<% category.sub_categories.each do |sub_category| %>
+				<ul class="<%= category == this_category ? "" : "hidden" %>">
+					<li><%= link_to sub_category.name, sub_category	%></li>
+				</ul>
+			<% end %>
+		<% end %>
+	</ul>
+</div>

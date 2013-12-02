@@ -1,16 +1,7 @@
-<div class="sidebar">
-	<h4>Categories</h4>
-</div>
+<%= render 'layouts/sidebar', categories: @main_categories, this_category: nil %>
 
-<div class="main-categories-list">
-	<div class="row">
+<div class="content">
 	<% @main_categories.each do |main_category| %>
-		<div class="category-thumbnail">
-			<div class="inner">
-				<%= image_tag "http://placehold.it/300x150" %>
-				<h3><%= main_category.name %></h3>
-			</div>
-		</div>
+		<%= link_to render('category_thumbnail', category: main_category), main_category %>
 	<% end %>
-	</div>
 </div>

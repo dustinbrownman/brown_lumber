@@ -9,6 +9,7 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder'
 gem 'bootstrap-sass', "~> 3.0.2.1"
+gem 'bootstrap-sass-extras'
 
 group :development, :test do
   gem 'rspec-rails'
@@ -26,4 +27,8 @@ group :test do
   gem 'capybara'
   gem 'factory_girl_rails'
   gem 'launchy'
+end
+
+group :production do
+	gem 'rails_12factor'
 end

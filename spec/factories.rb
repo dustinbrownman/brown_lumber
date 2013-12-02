@@ -12,4 +12,9 @@ FactoryGirl.define do
   	main_category
   end
 
+  factory :product do
+  	sequence(:description) { |n| "Product#{n}" }
+  	sub_category
+  end
+
 end

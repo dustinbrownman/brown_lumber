@@ -1,0 +1,13 @@
+<%= render 'layouts/sidebar', categories: @main_categories, this_category: @product.sub_category.main_category %>
+
+<div class="content product">
+	<h1><%= @product.description %></h1>
+	<%= render_breadcrumbs %>
+	<%= image_tag "http://placehold.it/300x300" %>
+	<p>
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ut varius turpis. In adipiscing ut diam eu interdum. Vivamus volutpat tellus vel purus ullamcorper condimentum. Morbi vitae quam faucibus, pharetra elit id, volutpat nisi. Morbi vitae turpis varius, facilisis arcu nec, adipiscing turpis.
+	</p>
+	<p>
+		Cras sit amet elit rhoncus, dapibus justo sit amet, ornare magna. Fusce eleifend porttitor ultricies. Mauris blandit interdum aliquam. Pellentesque sed molestie lacus. Aenean nec ullamcorper arcu. Fusce id neque in nunc aliquet ornare. Nam non libero quis leo rhoncus sollicitudin. Duis pellentesque id erat vitae auctor. Praesent mi lectus, auctor eu felis ac, ullamcorper mollis augue.
+	</p>
+</div>
