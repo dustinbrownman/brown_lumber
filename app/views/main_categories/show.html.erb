@@ -5,6 +5,12 @@
 
 	<%= render_breadcrumbs %>
 
+	<% if @main_category.description %>
+		<p class="lead">
+			<%= @main_category.description %>
+		</p>
+	<% end %>
+
 	<% @main_category.sub_categories.each do |sub_category| %>
 		<%= link_to render('category_thumbnail', category: sub_category), sub_category %>
 	<% end %>

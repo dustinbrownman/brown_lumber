@@ -46,7 +46,10 @@ describe 'Main Category Pages' do
 		end
 
 		it { should have_content @main_category.name }
+		it { should have_content @main_category.description }
 		it { should have_content @sub_category.name }
-		it { should have_content @product.description }
+		
+		# May need to add this back in if we decide we want products listed on this page
+		# it { should have_content @product.description }
 	end
 end

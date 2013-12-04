@@ -4,5 +4,11 @@
 	<h1><%= @sub_category.name %></h1>
 	<%= render_breadcrumbs %>
 
+	<% if @sub_category.description %>
+		<p class="lead">
+			<%= @sub_category.description %>
+		</p>
+	<% end %>
+
 	<%= render 'products/products_table', category: @sub_category %>
 </div>

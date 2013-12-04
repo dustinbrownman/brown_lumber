@@ -11,6 +11,7 @@ describe "SubCategory pages" do
 		}
 
 		it { should have_content @sub_category.name }
+		it { should have_content @sub_category.description }
 		it { should have_content @product.description }
 	end
 end
