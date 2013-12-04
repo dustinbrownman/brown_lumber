@@ -63,6 +63,10 @@ body:before {
 	p {
 		@extend .text-muted;
 	};
+
+	.admin-link {
+		@extend .text-muted;
+	}
 }
 
 .main-section {
