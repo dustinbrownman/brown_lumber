@@ -164,3 +164,18 @@ body:before {
 .navbar .navbar-collapse {
   text-align: center;
 }
+
+.signin {
+	@include make-lg-column(4);
+	@include make-lg-column-offset(4);
+
+	form {
+		div {
+			@extend .form-group;
+
+			input {
+				@extend .form-control;
+			}
+		}
+	}
+}

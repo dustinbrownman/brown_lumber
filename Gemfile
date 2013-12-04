@@ -10,6 +10,7 @@ gem 'turbolinks'
 gem 'jbuilder'
 gem 'bootstrap-sass', "~> 3.0.2.1"
 gem 'bootstrap-sass-extras'
+gem 'devise'
 
 group :development, :test do
   gem 'rspec-rails'

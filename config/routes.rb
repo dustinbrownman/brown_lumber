@@ -1,4 +1,5 @@
 BrownLumber::Application.routes.draw do
+  devise_for :admins
 	get 'about',    to: 'static_pages#about'
 	get 'location', to: 'static_pages#location'
 
