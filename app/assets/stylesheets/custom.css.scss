@@ -138,6 +138,11 @@ body:before {
 	}
 }
 
+.products-table {
+	@extend .table;
+	@extend .table-striped;
+}
+
 .product {
 	img {
 		float: left;

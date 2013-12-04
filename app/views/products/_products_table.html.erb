@@ -1,0 +1,17 @@
+<table class="products-table">
+	<thead>
+		<tr>
+			<th>Description</th>
+			<th>Part Number</th>
+			<th>Units</th>
+			<th>Weight</th>
+			<th>Length</th>
+			<th>Brand</th>
+		</tr>
+	</thead>
+	<tbody>
+		<% category.products.each do |product| %>
+			<%= render 'products/product_list_item', product: product %>
+		<% end %>
+	</tbody>
+</table>
