@@ -170,12 +170,17 @@ body:before {
 	@include make-lg-column-offset(4);
 
 	form {
-		div {
+		div.input {
 			@extend .form-group;
 
 			input {
 				@extend .form-control;
 			}
+		}
+
+		input {
+			@extend .btn;
+			@extend .btn-primary;
 		}
 	}
 }
