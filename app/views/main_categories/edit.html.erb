@@ -1,0 +1,22 @@
+<div class="edit_category">
+	<p class="lead">
+		Edit your category information here.
+	</p>
+
+	<%= form_for @main_category do |f| %>
+
+		<%= render 'layouts/form_errors', subject: @main_category %>
+
+		<div class="input">
+			<%= f.label :name %>
+			<%= f.text_field :name %>
+		</div>
+
+		<div class="input">
+			<%= f.label :description %>
+			<%= f.text_area :description, rows: '8' %>
+		</div>
+
+		<%= f.submit 'Update' %>
+	<% end %>
+</div>

@@ -1,7 +1,11 @@
 <%= render 'layouts/sidebar', categories: @main_categories, this_category: @main_category %>
 
 <div class="content">
-	<h1><%= @main_category.name %></h1>
+	<h1><%= @main_category.name %>
+		<% if admin_signed_in? %>
+			<small><%= link_to 'edit', edit_main_category_path(@main_category) %></small>
+		<% end %>
+	</h1>
 
 	<%= render_breadcrumbs %>
 

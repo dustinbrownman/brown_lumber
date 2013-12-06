@@ -15,7 +15,7 @@ html, body {
 	height: 100%;
 }
 
-/* Shadow at the top of browser window */
+// Shadow at the top of browser window
 body:before {
   content: "";
   position: fixed;
@@ -175,6 +175,8 @@ body:before {
 	        box-shadow: inset 0px 0px 100px rgba(0,0,0,.8);
 }
 
+// Bootstrap overrides
+
 .navbar .navbar-nav {
   display: inline-block;
   float: none;
@@ -185,21 +187,30 @@ body:before {
 }
 
 .signin {
-	@include make-lg-column(4);
-	@include make-lg-column-offset(4);
+	@extend .centered-block;
+}
 
-	form {
-		div.input {
-			@extend .form-group;
+form {
+	div.input {
+		@extend .form-group;
 
-			input {
-				@extend .form-control;
-			}
-		}
-
-		input {
-			@extend .btn;
-			@extend .btn-primary;
+		input, textarea {
+			text-align: left;
+			@extend .form-control;
 		}
 	}
+
+	input {
+		@extend .btn;
+		@extend .btn-primary;
+	}
+}
+
+.edit_category {
+	@extend .centered-block;
+}
+
+.centered-block {
+	@include make-lg-column(4);
+	@include make-lg-column-offset(4);
 }
