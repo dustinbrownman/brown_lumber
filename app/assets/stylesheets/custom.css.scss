@@ -31,6 +31,21 @@ body:before {
   z-index: 100;
 }
 
+.flash {
+	@extend .alert;
+	@extend .alert-dismissable;
+	margin-bottom: 0px;
+	border-radius: 0px;
+}
+
+.notice {
+	@extend .alert-success;
+}
+
+.danger {
+	@extend .alert-danger;
+}
+
 .header {
 	@extend .text-center;
 	background-image: image-url("grey.png");

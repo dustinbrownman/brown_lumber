@@ -19,4 +19,9 @@ FactoryGirl.define do
   	sub_category
   end
 
+  factory :admin do
+    sequence(:email) { |n| "admin#{n}@host.com" }
+    password "password"
+    password_confirmation "password"
+  end
 end
