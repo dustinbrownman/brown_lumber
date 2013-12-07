@@ -1,6 +1,7 @@
 <%= render 'layouts/sidebar', categories: @main_categories, this_category: @sub_category.main_category %>
 
 <div class="content">
+	<%= image_tag @sub_category.image.url(:full), class: 'category_main' %>
 	<h1><%= @sub_category.name %>
 		<% if admin_signed_in? %>
 			<small><%= link_to 'edit', edit_sub_category_path(@sub_category) %></small>

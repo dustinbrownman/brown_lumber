@@ -3,7 +3,7 @@
 		Edit your category information here.
 	</p>
 
-	<%= form_for @main_category, :html => { multipart: true } do |f| %>
+	<%= form_for @main_category do |f| %>
 
 		<%= render 'layouts/form_errors', subject: @main_category %>
 

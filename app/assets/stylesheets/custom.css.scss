@@ -118,6 +118,15 @@ body:before {
 .content {
 	@include make-md-column(10);
 	padding-top: 0px;
+
+	div.category-image {
+		@include make-row;
+
+		img {
+			@extend img-responsive;
+			@include make-md-column(12);
+		}
+	}
 }
 
 .category-thumbnail {

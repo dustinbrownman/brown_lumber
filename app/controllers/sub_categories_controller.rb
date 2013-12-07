@@ -2,7 +2,7 @@ class SubCategoriesController < ApplicationController
 	before_filter :authenticate_admin!, only: [:edit, :update]
 
 	def show
-		@main_categories = MainCategory.all
+		@main_categories = MainCategory.all.order(:id)
 		@sub_category = SubCategory.find(params[:id])
 		add_breadcrumb "Categories", main_categories_path
 		add_breadcrumb @sub_category.main_category.name, @sub_category.main_category
@@ -26,6 +26,6 @@ class SubCategoriesController < ApplicationController
 private
 
 	def main_category_params
-		params.require(:sub_category).permit(:name, :description)
+		params.require(:sub_category).permit(:name, :description, :image)
 	end
 end
