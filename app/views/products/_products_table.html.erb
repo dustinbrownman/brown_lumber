@@ -7,6 +7,9 @@
 			<th>Weight</th>
 			<th>Length</th>
 			<th>Brand</th>
+			<% if admin_signed_in? %>
+				<th>Edit</th>
+			<% end %>
 		</tr>
 	</thead>
 	<tbody>

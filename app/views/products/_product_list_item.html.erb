@@ -5,4 +5,7 @@
 	<td><%= product.weight %></td>
 	<td><%= product.length %></td>
 	<td><%= product.brand %></td>
+	<% if admin_signed_in? %>
+		<td><%= link_to 'edit', edit_product_path(product) %></td>
+	<% end %>
 </tr>
