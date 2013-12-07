@@ -37,13 +37,18 @@ describe "SubCategory pages" do
 		end
 
 		describe "visiting edit path" do
-			before { visit edit_sub_category_path(@sub_category) }
-
 			context "as admin" do
+				before do
+					sign_in(admin)
+					visit edit_sub_category_path(@sub_category)
+				end
 
+				it { should have_content "Edit your category" }
 			end
 
 			context "as visitor" do
+				before { visit edit_sub_category_path(@sub_category) }
+
 				it { should have_content 'You need to sign in' }
 			end
 		end

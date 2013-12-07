@@ -3,7 +3,7 @@
 <div class="content">
 	<h1><%= @sub_category.name %>
 		<% if admin_signed_in? %>
-			<small><%= link_to 'edit', edit_main_category_path(@main_category) %></small>
+			<small><%= link_to 'edit', edit_sub_category_path(@sub_category) %></small>
 		<% end %>
 	</h1>
 	<%= render_breadcrumbs %>

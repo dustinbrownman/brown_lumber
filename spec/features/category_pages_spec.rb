@@ -76,13 +76,18 @@ describe 'Main Category Pages' do
 		end
 
 		describe "visiting edit path" do
-			before { visit edit_main_category_path(@main_category) }
-
 			context "as admin" do
+				before do
+					sign_in(admin)
+					visit edit_main_category_path(@main_category)
+				end
 
+				it { should have_content "Edit your category" }
 			end
 
 			context "as visitor" do
+				before { visit edit_main_category_path(@main_category) }
+
 				it { should have_content 'You need to sign in' }
 			end
 		end
