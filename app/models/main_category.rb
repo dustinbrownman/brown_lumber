@@ -1,5 +1,5 @@
 class MainCategory < ActiveRecord::Base
-	has_many :sub_categories
+	has_many :sub_categories, dependent: :destroy
 	has_many :products, through: :sub_categories
 
 	has_attached_file :image, :styles => { full: ['1000x250#', :png], thumb: ['300x150#', :png] },

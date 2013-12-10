@@ -3,7 +3,7 @@ class SubCategory < ActiveRecord::Base
 														:default_url => "/assets/:style/missing.png"
 
 	belongs_to :main_category
-	has_many :products
+	has_many :products, dependent: :destroy
 
 	validates :name, presence: true, uniqueness: true
 	validates_attachment_content_type :image, content_type: ['image/jpg', 'image/jpeg', 'image/png', 'image/gif'],
