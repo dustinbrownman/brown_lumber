@@ -7,4 +7,10 @@ class StaticPagesController < ApplicationController
 
 	def location
 	end
+
+	def contact
+	end
+
+	def product_help
+	end
 end

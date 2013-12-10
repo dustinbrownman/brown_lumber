@@ -203,7 +203,7 @@ form {
 	div.input {
 		@extend .form-group;
 
-		input, textarea {
+		input, textarea, select {
 			text-align: left;
 			@extend .form-control;
 		}
@@ -222,4 +222,14 @@ form {
 .centered-block {
 	@include make-lg-column(4);
 	@include make-lg-column-offset(4);
+}
+
+.calculator {
+	@include make-md-column(6);
+
+	div.inner {
+		padding: 20px;
+		box-shadow: 0 4px 5px -2px rgba(0,0,0,0.4);
+		margin: 10px;
+	}
 }
