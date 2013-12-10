@@ -1,3 +1,5 @@
+<% provide :title, @sub_category.name %>
+
 <%= render 'layouts/sidebar', categories: @main_categories, this_category: @sub_category.main_category %>
 
 <div class="content">
