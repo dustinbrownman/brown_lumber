@@ -101,7 +101,9 @@ body:before {
 }
 
 .sidebar {
-	@include make-md-column(2);
+	@include make-sm-column(2);
+	@extend .collapse;
+	@extend .navbar-collapse;
 
 	ul {
 		list-style: none;
@@ -116,17 +118,12 @@ body:before {
 }
 
 .content {
-	@include make-md-column(10);
+	@include make-sm-column(10);
 	padding-top: 0px;
+}
 
-	div.category-image {
-		@include make-row;
-
-		img {
-			@extend img-responsive;
-			@include make-md-column(12);
-		}
-	}
+.category-main {
+	@extend .img-responsive;
 }
 
 .category-thumbnail {
