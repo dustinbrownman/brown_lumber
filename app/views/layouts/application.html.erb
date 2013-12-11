@@ -23,15 +23,16 @@
 	</div>
 <% end %>
 
-<%= render 'layouts/header' %>
 
 <div class="container">
+	<%= render 'layouts/header' %>
+
 	<div class="main-section">
 		<%= yield %>
 	</div>
-</div>
 
-<%= render 'layouts/footer' %>
+	<%= render 'layouts/footer' %>
+</div>
 
 </body>
 </html>
