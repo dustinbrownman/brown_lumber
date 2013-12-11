@@ -4,12 +4,11 @@ $(function() {
 	var $doubleWallShingleCalc = $('#double-wall-shingle-calc');
 	var $roofShingleCalc = $('#roof-shingle-calc');
 
-
 	$linealFeetCalc.submit(function() {
 		var squareFeet = $('#sqft-lineal').val();
 		var millwork = $('#millwork :selected').val()
 		var total = squareFeet * millwork;
-		$('#lineal-feet').empty().append(total.toFixed(2));
+		$('#lf-total').empty().append(total.toFixed(2));
 		return false;
 	});
 
@@ -35,5 +34,25 @@ $(function() {
 		var total = squareFeet * shingleSize;
 		$('#rs-total').empty().append(total.toFixed(2));
 		return false;
+	});
+
+	$('#lineal-feet-choice').click(function() {
+		$('#lineal-feet').siblings('.calculator').hide();
+		$('#lineal-feet').slideToggle();
+	});
+
+	$('#single-wall-choice').click(function() {
+		$('#single-wall').siblings('.calculator').hide();
+		$('#single-wall').slideToggle();
+	});
+
+	$('#double-wall-choice').click(function() {
+		$('#double-wall').siblings('.calculator').hide();
+		$('#double-wall').slideToggle();
+	});
+
+	$('#roof-choice').click(function() {
+		$('#roof-shingle').siblings('.calculator').hide();
+		$('#roof-shingle').slideToggle();
 	});
 });

@@ -12,6 +12,7 @@ gem 'bootstrap-sass', "~> 3.0.2.1"
 gem 'bootstrap-sass-extras'
 gem 'devise'
 gem 'paperclip'
+gem 'font-awesome-rails'
 
 group :development, :test do
   gem 'rspec-rails'

@@ -1,14 +1,16 @@
-<div class="calculator">
+<div class="calculator" id="lineal-feet">
 	<div class="inner">
-		<h3>Square Feet to Lineal Foot Calculator</h3>
+		<h4>Square Feet to Lineal Foot Calculator</h4>
+		<hr>
 		<form id="lineal-feet-calc">
 			<div class="input">
 				<label for="sqft-lineal">Enter square feet:</label>
-				<input id="sqft-lineal" type="number">
+				<input id="sqft-lineal" type="number" placeholder="Enter square feet">
 			</div>
 			<div class="input">
 				<label for="millwork">Select millwork:</label>
 				<select id="millwork">
+					<option value="" default selected disabled>Select millwork..</option>
 	        <optgroup label="Bevel Siding">
 		        <option value="4.8">1/2X4 Bevel Siding</option>
 		        <option value="2.68">1/2X6 Bevel Siding</option>
@@ -68,9 +70,11 @@
 				</select>
 			</div>
 
-			<input type="submit" value="Calculate">
-
-			<h3>Total Lineal Feet Needed: <span id="lineal-feet" class="answer"></span></h3>	
+			<button type="submit">Calculate</button>
 		</form>
+
+		<h5>Total Lineal Feet Needed:</h5>
+		<h3 id="lf-total" class="answer"></h3>	
+
 	</div>
 </div>
