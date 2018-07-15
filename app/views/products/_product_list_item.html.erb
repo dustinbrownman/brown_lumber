@@ -1,0 +1,15 @@
+<tr>
+	<td><%= product.description %></td>
+	<td><%= product.part_number %></td>
+	<td><%= product.units %></td>
+	<td><%= product.length %></td>
+	<td><%= product.brand %></td>
+	<% if admin_signed_in? %>
+		<td><%= link_to 'edit', edit_product_path(product) %></td>
+		<td>
+			<%= link_to product_path(product), :method => :delete, :data => { :confirm => 'Are you sure?' } do %>
+				<i class="fa fa-times-circle"></i>
+			<% end %>
+		</td>
+	<% end %>
+</tr>

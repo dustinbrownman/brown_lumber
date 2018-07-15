@@ -1,0 +1,47 @@
+<div class="edit_form">
+	<p class="lead">
+		Edit your product information here.
+	</p>
+
+	<%= form_for @product do |f| %>
+
+		<%= render 'layouts/form_errors', subject: @product %>
+
+		<div class="input">
+			<%= f.label :description %>
+			<%= f.text_field :description %>
+		</div>
+
+		<div class="input">
+			<%= f.label :part_number %>
+			<%= f.text_field :part_number %>
+		</div>
+
+		<div class="input">
+			<%= f.label :barcode_number %>
+			<%= f.text_field :barcode_number %>
+		</div>
+
+		<div class="input">
+			<%= f.label :units %>
+			<%= f.text_field :units %>
+		</div>
+
+		<div class="input">
+			<%= f.label :weight %>
+			<%= f.text_field :weight %>
+		</div>
+
+		<div class="input">
+			<%= f.label :length %>
+			<%= f.text_field :length %>
+		</div>
+
+		<div class="input">
+			<%= f.label :brand %>
+			<%= f.text_field :brand %>
+		</div>
+
+		<%= f.submit 'Update' %>
+	<% end %>
+</div>

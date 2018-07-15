@@ -1,0 +1,12 @@
+<div class="footer">
+	<!-- <div class="container"> -->
+		<p>
+			&copy; Brown Lumber, 2013 |
+			<% if admin_signed_in? %>
+				Logged in as Admin - <%= link_to 'Sign out', destroy_admin_session_path, method: 'Delete' %>
+			<% else %>
+				<%= link_to 'Admin Sign in', new_admin_session_path, class: 'admin-link' %>
+			<% end %>
+		</p>
+	<!-- </div> -->
+</div>

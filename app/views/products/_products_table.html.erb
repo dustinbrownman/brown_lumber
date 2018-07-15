@@ -1,0 +1,22 @@
+<div class="table-responsive">
+	<table class="products-table">
+		<thead>
+			<tr>
+				<th>Description</th>
+				<th>Part Number</th>
+				<th>Units</th>
+				<th>Length</th>
+				<th>Brand</th>
+				<% if admin_signed_in? %>
+					<th>Edit</th>
+					<th></th>
+				<% end %>
+			</tr>
+		</thead>
+		<tbody>
+			<% category.products.order(:part_number).each do |product| %>
+				<%= render 'products/product_list_item', product: product %>
+			<% end %>
+		</tbody>
+	</table>
+</div>

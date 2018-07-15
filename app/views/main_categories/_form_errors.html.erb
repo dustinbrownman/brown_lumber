@@ -1,0 +1,10 @@
+<% if subject.errors.any? %>
+  <div id="flash danger">
+    <h2><%= pluralize(subject.errors.count, "error") %> prohibited this from being saved:</h2>
+    <ul>
+    <% subject.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>

@@ -1,0 +1,80 @@
+<div class="calculator" id="lineal-feet">
+	<div class="inner">
+		<h4>Square Feet to Lineal Foot Calculator</h4>
+		<hr>
+		<form id="lineal-feet-calc">
+			<div class="input">
+				<label for="sqft-lineal">Enter square feet:</label>
+				<input id="sqft-lineal" type="number" placeholder="Enter square feet">
+			</div>
+			<div class="input">
+				<label for="millwork">Select millwork:</label>
+				<select id="millwork">
+					<option value="" default selected disabled>Select millwork..</option>
+	        <optgroup label="Bevel Siding">
+		        <option value="4.8">1/2X4 Bevel Siding</option>
+		        <option value="2.68">1/2X6 Bevel Siding</option>
+		        <option value="2.68">3/4X6 Bevel Siding</option>
+		        <option value="1.86">1/2X8 Bevel Siding</option>
+		        <option value="1.86">5/8X8 Bevel Siding</option>
+		        <option value="1.86">3/4X8 Bevel Siding</option>
+		        <option value="1.42">5/8X10 Bevel Siding</option>
+		        <option value="1.42">3/4X10 Bevel Siding</option>
+		        <option value="2.34">3/4X6 Rabbetted Siding</option>
+		        <option value="1.69">3/4X8 Rabbetted Siding</option>
+	        </optgroup>
+	        <optgroup label="Channel Siding">
+		        <option value="2.48">1X6 Channel Siding</option>
+		        <option value="1.81">1X8 Channel Siding</option>
+		        <option value="1.39">1X10 Channel Siding</option>
+		        <option value="1.09">1X12 Channel Siding</option>
+	        </optgroup>
+	        <optgroup label="Lock Deck">
+		        <option value="2.29">3X6 Lock Deck</option>
+		        <option value="2.29">4X6 Lock Deck</option>
+		        <option value="2.29">5X6 Lock Deck</option>
+		      </optgroup>
+	        <optgroup label="WCLIB Patterns">
+		        <option value="3.84">5/8X4 Combo Ceiling</option>
+		        <option value="3.84">1X4 T/G Flooring</option>
+		        <option value="2.4">1X6 Pattern Siding</option>
+		        <option value="1.78">1X8 Pattern Siding</option>
+		      </optgroup>
+	        <optgroup label="A and Better Cedar">
+		        <option value="3.69">7/16X4 T/G Cedar</option>
+		        <option value="2.3">7/16X6 T/G Cedar</option>
+		      </optgroup>
+	        <optgroup label="S4S Decking">
+		        <option value="3.33">1X4 Decking</option>
+		        <option value="2.14">1X6 Decking</option>
+		        <option value="3.43">5/4X4 Decking</option>
+		        <option value="2.18">5/4X6 Decking</option>
+		        <option value="4.80">2X3 Decking</option>
+		        <option value="3.43">2X4 Decking</option>
+		        <option value="2.18">2X6 Decking</option>
+		        <option value="1.67">2X8 Decking</option>
+	        </optgroup>
+	        <optgroup label="T/G Decking">
+		        <option value="2.40">2X6 T/G Decking</option>
+		        <option value="1.78">2X8 T/G Decking</option>
+		        <option value="2.40">3X6 T/G Decking</option>
+		        <option value="2.29">4X6 T/G Decking</option>
+	        </optgroup>
+	        <optgroup label="WWPA Patterns">
+		        <option value="2.40">1X8 WP2</option>
+		        <option value="3.99">1X4 WP4</option>
+		        <option value="2.40">1X6 WP4</option>
+		        <option value="1.78">1X8 WP4</option>
+		        <option value="2.40">1X6 WP6</option>
+		      </optgroup>
+				</select>
+			</div>
+
+			<button type="submit">Calculate</button>
+		</form>
+
+		<h5>Total Lineal Feet Needed:</h5>
+		<h3 id="lf-total" class="answer"></h3>	
+
+	</div>
+</div>

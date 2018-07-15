@@ -1,0 +1,27 @@
+<% provide :title, 'Product Help' %>
+<div class="ribbon">
+	<div class="col-md-12">
+		<h1>Product Help</h1>
+		<p class="lead">
+			Not sure how much lumber you're going to need? We've got you covered. Use our simple calculation tools and charts below give you an estimate of what you'll need. If you're still not sure, <%= link_to 'contact us', contact_path %> and we'll help you out.
+		</p>
+	</div>
+</div>
+<div class="ribbon">
+	<div class="calculators">
+		<h2 class="page-header">Calculators</h2>
+		<%= render 'lineal_feet_calc' %>
+		<%= render 'single_wall_shingle_calc' %>
+		<%= render 'double_wall_shingle_calc' %>
+		<%= render 'roof_shingle_calc' %>
+	</div>
+</div>
+
+<div class="ribbon">
+	<div class="col-md-12">
+		<h2 class="page-header">More...</h2>
+	<!--	<p><%= link_to "Lumber weight chart", "/image/lumberweight.pdf" %></p> -->
+	</div>
+</div>
+
+<%= javascript_include_tag 'calculators' %>

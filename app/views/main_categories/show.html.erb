@@ -1,0 +1,24 @@
+<% provide :title, @main_category.name %>
+
+<%= render 'layouts/sidebar', categories: @main_categories, this_category: @main_category %>
+
+<div class="content">
+	<%= image_tag @main_category.image.url(:full), class: 'category-main' %>
+	<h1><%= @main_category.name %>
+		<% if admin_signed_in? %>
+			<small><%= link_to 'edit', edit_main_category_path(@main_category) %></small>
+		<% end %>
+	</h1>
+
+	<%= render_breadcrumbs '' %>
+
+	<% if @main_category.description %>
+		<div class="category-description">
+			<%= @main_category.description.html_safe %>
+		</div>
+	<% end %>
+
+	<% @main_category.sub_categories.each do |sub_category| %>
+		<%= link_to render('category_thumbnail', category: sub_category), sub_category %>
+	<% end %>
+</div>

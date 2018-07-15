@@ -1,0 +1,41 @@
+<div class="edit_form">
+	<p class="lead">
+		Edit your category information here.
+	</p>
+
+	<%= form_for @main_category do |f| %>
+
+		<%= render 'layouts/form_errors', subject: @main_category %>
+
+		<div class="input">
+			<%= f.label :name %>
+			<%= f.text_field :name %>
+		</div>
+
+		<div class="input">
+			<%= f.label :description %>
+			<%= f.text_area :description, rows: '8', class: 'wysihtml5' %>
+		</div>
+
+		<div class="input">
+			<%= f.label :image %>
+			<%= f.file_field :image %>
+		</div>
+
+		<%= f.submit 'Update' %>
+	<% end %>
+</div>
+
+<script type="text/javascript">
+  $('.wysihtml5').each(function(i, elem) {
+    $(elem).wysihtml5({
+    	"font-styles": false,
+  		"emphasis": true, //Italics, bold, etc. Default true
+  		"lists": true, //(Un)ordered lists, e.g. Bullets, Numbers. Default true
+  		"html": true, //Button which allows you to edit the generated HTML. Default false
+  		"link": true, //Button to insert a link. Default true
+  		"image": false, //Button to insert an image. Default true,
+  		"color": false //Button to change color of font 
+    });
+  });
+</script>

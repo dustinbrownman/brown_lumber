@@ -1,0 +1,75 @@
+<% provide :title, 'Home' %>
+
+<%-
+# Holiday schedule
+#
+# Add closed holidays in the section below, using the following format:
+#
+# `Holiday name (optional, and must be surrounded in backticks)` START_DATE, END_DATE(optional)
+#                                                               (YYYY-MM-DD)
+#
+# Example:
+#
+# `Independence Day` 2017-07-04
+# `Thanksgiving`     2017-11-23, 2017-11-24
+#                    2017-12-25
+#
+# Every new line is a new holiday. For single-day holidays, just add the START_DATE. For multi-day
+# holidays, add an END_DATE. The app will display both dates with a hyphen in between as such:
+#
+# 2017-07-07             --> July 7
+# 2017-11-23, 2017-11-24 --> November 23 - Novermber 24
+#
+### Holiday List. Feel free to edit. Only upcoming holidays will be displayed ###
+holidays = <<-csv
+`Memorial Day`     2018-05-28
+`Independence Day` 2018-07-04
+`Labor Day`        2017-09-01, 2017-09-04
+`Thanksgiving`     2017-11-23, 2017-11-24
+`Christmas`        2017-12-25, 2017-12-26
+`New Years Day`    2018-01-01
+csv
+### End Holiday List ###
+
+upcoming_holidays = HolidaySchedule.build(holidays).upcoming(3.months)
+-%>
+
+<div class="prominent">
+	<%= image_tag "main-test.png", alt: "Brown Lumber Yard" %>
+</div>
+<div class="aside">
+	<h1>Welcome</h1>
+
+	<p>
+		Brown Lumber is not only a full service lumber yard, we also carry Hardware,
+		Plumbing, and Electrical.
+	</p>
+	<p>
+		So come on in, have a free doughnut, some coffee, and discuss your project needs
+		with our non-experts.
+	</p>
+
+	<p>
+		<strong>Hours</strong><br>
+		Monday - Friday<br>
+		7:30am - 5:00pm
+        
+	</p>
+
+	<% unless upcoming_holidays.empty? %>
+		<p>
+			<strong>Holiday schedule</strong><br>
+			<strong>Closed:</strong><br>
+
+			<% upcoming_holidays.each do |holiday| %>
+			  <%-
+				# This is the HTML for each holiday. Edit as needed, but be sure to keep the "holiday" tag,
+				# as this is how the holiday is dynamically displayed.
+				-%>
+	      <strong><%= holiday %></strong>
+				<br>
+				<br>
+			<% end %>
+		</p>
+	<% end %>
+</div>

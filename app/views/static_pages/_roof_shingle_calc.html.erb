@@ -1,0 +1,40 @@
+<div class="calculator" id="roof-shingle">
+	<div class="inner">
+		<h4>Roof Shingle Calculator</h4>
+    <hr>
+		<form id="roof-shingle-calc">
+			<div class="input">
+				<label for="sqft-RS">Enter square feet:</label>
+				<input id="sqft-RS" type="number" placeholder="Enter square feet">
+			</div>
+			<div class="input">
+				<label for="roof-shingle-size">Select shingle size and exposure:</label>
+			  <select id="roof-shingle-size">
+          <option value="" default selected disabled>Select size and exposure..</option>
+          <optgroup label='16" Shingles'>
+            <option value=".0125">4inch Exposure</option>
+            <option value=".0111">4 1/2inch Exposure</option>
+            <option value=".01">5inch Exposure</option>
+     			</optgroup>
+          <optgroup label='18" Shingles'>
+            <option value=".01428">4inch Exposure</option>
+            <option value=".0125">4 1/2inch Exposure</option>
+            <option value=".0111">5inch Exposure</option>
+            <option value=".01">5 1/2inch Exposure</option>
+     			</optgroup>
+          <optgroup label='24" Shingles'>
+            <option value=".0125">6inch Exposure</option>
+            <option value=".0111">6 1/2inch Exposure</option>
+            <option value=".01252">7inch Exposure</option>
+            <option value=".01">7 1/2inch Exposure</option>
+          </optgroup>
+        </select>
+			</div>
+
+			<button type="submit">Calculate</button>
+		</form>
+    <h5>Total Square of Shingles Needed:</h5>
+    <h3 id="rs-total" class="answer"></h3>
+
+	</div>
+</div>

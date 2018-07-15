@@ -1,0 +1,314 @@
+$clouds: #ecf0f1;
+$silver: #bdc3c7;
+$asbestos: #7f8c8d;
+
+/* Bootstrap mixin variables */
+$brand-primary: red;
+$brand-secondary: $asbestos;
+$navbar-default-link-color: darken($asbestos, 20%);
+$navbar-default-link-hover-color: red;
+$navbar-default-link-hover-bg: transparent;
+
+@import "bootstrap";
+@import "font-awesome";
+
+html, body {
+	height: 100%;
+}
+
+body {
+	background-image: url(escheresque_ste.png); //might need image-url()
+	padding: 50px 0 20px 0;
+}
+
+// Shadow at the top of browser window
+body:before {
+  content: "";
+  position: fixed;
+  top: -10px;
+  left: 0;
+  width: 100%;
+  height: 10px;
+
+  -webkit-box-shadow: 0px 0px 10px rgba(0,0,0,.8);
+     -moz-box-shadow: 0px 0px 10px rgba(0,0,0,.8);
+          box-shadow: 0px 0px 10px rgba(0,0,0,.8);
+
+  z-index: 100;
+}
+
+.container {
+	background-color: white;
+	padding: 0;
+	-webkit-box-shadow: 0 2px 3px 0px rgba(0, 0, 0, 0.16);
+		 -moz-box-shadow: 0 2px 3px 0px rgba(0, 0, 0, 0.16);
+					box-shadow: 0 2px 3px 0px rgba(0, 0, 0, 0.16);
+}
+
+.flash {
+	@extend .alert;
+	@extend .alert-dismissable;
+	margin-bottom: 0px;
+	border-radius: 0px;
+}
+
+.notice {
+	@extend .alert-success;
+}
+
+.danger {
+	@extend .alert-danger;
+}
+
+.header {
+	@extend .text-center;
+	
+	img {
+		@extend .img-responsive;
+		margin: -25px auto 10px auto;
+	};
+
+	nav {
+		background-color: $silver;
+		border: none;
+		margin: 0 -15px;
+		border-radius: 0px;
+		box-shadow: 0px 13px 10px -13px black;
+		font-size: 1.2em;
+	};
+}
+
+.footer {
+	border-top: 2px solid $clouds;
+	padding: 10px;
+	margin-top: 10px 20px;
+	height: 50%;
+
+	p {
+		@extend .text-muted;
+	};
+
+	.admin-link {
+		@extend .text-muted;
+	}
+}
+
+.main-section {
+  @include make-row();
+  height: 100%;
+  padding: 20px;
+  margin: auto 0;
+
+  .prominent {
+	@include make-lg-column(7);
+  	img {
+  		@extend .img-responsive;
+  		@include make-lg-column(12);
+  	}
+  }
+
+  .aside {
+  	@include make-lg-column(5);
+  };	
+}
+
+.sidebar {
+	@include make-sm-column(2);
+	@extend .collapse;
+	@extend .navbar-collapse;
+
+	ul {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+
+		ul {
+			list-style: square;
+			margin-left: 15px;
+		}
+	}
+}
+
+.content {
+	@include make-sm-column(10);
+	padding-top: 0px;
+}
+
+.ribbon {
+	@include make-row();
+}
+
+.category-main {
+	@extend .img-responsive;
+}
+
+.category-thumbnail {
+	@include make-md-column(4);
+	float: left;
+
+	div.inner {
+		@extend .thumbnail;
+		border: none;
+		box-shadow: 0 4px 5px -2px rgba(0,0,0,0.4);
+		border-radius: 0;
+		vertical-align: bottom;
+
+		img {
+			@extend .img-responsive;
+		};
+
+		a {
+			color: black;
+		}
+
+		h3 {
+			display: inline-block;
+			margin: 5px 0 0 0;
+		}
+	}
+}
+
+.product_thumbnail {
+	border-bottom: 1px solid $clouds;
+	margin: 10px 0;
+	padding-bottom: 10px;
+
+	img {
+		float: left;
+		padding-right: 10px;
+	}
+}
+
+.products-table {
+	@extend .table;
+	@extend .table-striped;
+}
+
+.product {
+	img {
+		float: left;
+		padding: 0 10px 10px 0;
+	}
+}
+
+.vignette {
+	-webkit-box-shadow: inset 0px 0px 100px rgba(0,0,0,.8);
+	   -moz-box-shadow: inset 0px 0px 100px rgba(0,0,0,.8);
+	        box-shadow: inset 0px 0px 100px rgba(0,0,0,.8);
+}
+
+// Bootstrap overrides
+
+.navbar .navbar-nav {
+  display: inline-block;
+  float: none;
+}
+
+.navbar .navbar-collapse {
+  text-align: center;
+}
+
+.signin {
+	@extend .centered-block;
+}
+
+form {
+	div.input {
+		@extend .form-group;
+
+		input, textarea, select {
+			text-align: left;
+			@extend .form-control;
+		}
+	}
+
+	button {
+		@extend .btn;
+		@extend .btn-primary;
+	}
+}
+
+.edit_form {
+	@extend .centered-block;
+}
+
+.centered-block {
+	@include make-lg-column(6);
+	@include make-lg-column-offset(3);
+}
+
+.calculator {
+	@include make-sm-column(6);
+	@include make-lg-column(3);
+	margin-bottom: 20px;
+
+	div.inner {
+		border: 3px solid $clouds;
+		border-radius: 5px;
+		padding: 10px;
+		form {
+			@extend .form-inline;
+
+			div.input {
+				@include make-md-column(12);
+				padding: 0 0 10px 0;
+
+				label {
+					@extend .sr-only;
+				}
+			}
+		}
+
+		h3.answer {
+			color: $brand-primary;
+			text-align: center;
+			margin-top: 0px;
+		}
+	}
+}
+
+.map {
+	@include make-md-column(12);
+	height: 400px;
+
+	iframe {
+		top: 0;
+		left: 0;
+	  width: 100%;
+	  height: 100%;
+	}
+
+	+ div {
+		@include make-md-column(12);
+	}
+}
+
+#choose-calculator {
+	button {
+		@extend .btn;
+		@extend .btn-primary;
+		@extend .btn-lg;
+		@extend .dropdown-toggle;
+	}
+
+	ul {
+		li {
+			padding: 5px 20px 5px 20px;
+			margin-bottom: 5px;
+		}
+
+		li:hover {
+			color: #fff;
+			background-color: $brand-primary;
+			cursor: pointer;
+		}
+	}
+}
+
+.calculators {
+	@include make-md-column(12);
+}
+
+.category-description {
+	@extend .lead;
+}

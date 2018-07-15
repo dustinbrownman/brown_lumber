@@ -1,0 +1,7 @@
+<%= render 'layouts/sidebar', categories: @main_categories, this_category: nil %>
+
+<div class="content">
+	<% @main_categories.each do |main_category| %>
+		<%= link_to render('category_thumbnail', category: main_category), main_category %>
+	<% end %>
+</div>

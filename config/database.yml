@@ -1,0 +1,17 @@
+default: &default
+  adapter: postgresql
+  pool: 5
+  timeout: 5000
+
+development:
+  <<: *default
+  database: brownlum_development
+
+test:
+  <<: *default
+  database: brownlum_test
+
+production:
+  <<: *default
+  username: brownlum_rails
+  password: brownlumber

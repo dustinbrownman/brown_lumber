@@ -23,7 +23,6 @@ end
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
-  gem 'quiet_assets'
   gem 'capistrano', '~> 2.15.x'
 end
 
@@ -34,6 +33,6 @@ group :test do
   gem 'launchy'
 end
 
-group :production do
-	gem 'therubyracer'
-end
+# group :production do
+# 	gem 'therubyracer'
+# end

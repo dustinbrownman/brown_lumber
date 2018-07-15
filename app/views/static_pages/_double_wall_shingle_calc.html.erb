@@ -1,0 +1,39 @@
+<div class="calculator" id="double-wall">
+	<div class="inner">
+		<h4>Wall Shingle Laid Double Course Calculator</h4>
+		<hr>
+		<form id="double-wall-shingle-calc">
+			<div class="input">
+				<label for="sqft-DS">Enter square feet:</label>
+				<input id="sqft-DS" type="number" placeholder="Enter square feet">
+			</div>
+			<div class="input">
+				<label for="double-shingle-size">Select size and exposure</label>
+				<select id="double-shingle-size">
+					<option value="" default selected disabled>Select size and exposure..</option>
+        	<optgroup label='16" Shingles'>
+		        <option value="0.01666">8inch Exposure</option>
+		        <option value="0.01481">9inch Exposure</option>
+		        <option value="0.01333">10inch Exposure</option>
+		        <option value="0.01223">11inch Exposure</option>
+		        <option value="0.01120">12inch Exposure</option>
+	        </optgroup>
+	        <optgroup label='18" Shingles'>
+        		<option value="0.01033">14inch Exposure</option>
+        	</optgroup>
+        	<optgroup label='24" Shingles'>
+        		<option value="0.01258">16inch Exposure</option>
+	      	</optgroup>
+        </select>
+			</div>
+
+			<button type="submit">Calculate</button>
+		</form>
+
+		<h5>Total Square of Shingles Needed:</h5>
+		<h3 id="ds-total" class="answer"></h3>
+		<p>
+			One half of the squares obtained will be No. 2 or No. 3 shingles for concealed courses and the other half will be the Number of squares required for outer courses.
+		</p>
+	</div>
+</div>
