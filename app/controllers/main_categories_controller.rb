@@ -1,8 +1,6 @@
 class MainCategoriesController < ApplicationController
 	before_action :authenticate_admin!, only: [:edit, :update]
 
-	add_breadcrumb "Categories", :main_categories_path
-
 	def index
 		@main_categories = MainCategory.all.order(:id)
 	end
@@ -10,6 +8,8 @@ class MainCategoriesController < ApplicationController
 	def show
 		@main_category = MainCategory.find(params[:id])
 		@main_categories = MainCategory.all.order(:id)
+
+		add_breadcrumb "Categories", main_categories_path
 		add_breadcrumb @main_category.name, @main_category
 	end
 
