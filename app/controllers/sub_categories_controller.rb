@@ -1,5 +1,5 @@
 class SubCategoriesController < ApplicationController
-	before_filter :authenticate_admin!, only: [:edit, :update]
+	before_action :authenticate_admin!, only: [:edit, :update]
 
 	def show
 		@main_categories = MainCategory.all.order(:id)

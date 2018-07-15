@@ -1,5 +1,5 @@
 class MainCategoriesController < ApplicationController
-	before_filter :authenticate_admin!, only: [:edit, :update]
+	before_action :authenticate_admin!, only: [:edit, :update]
 
 	add_breadcrumb "Categories", :main_categories_path
 
