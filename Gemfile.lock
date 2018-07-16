@@ -266,7 +266,7 @@ DEPENDENCIES
   bootstrap-sass!
   bootstrap-sass-extras
   bootstrap-wysihtml5-rails!
-  capistrano (~> 2.15.x)
+  capistrano
   capybara
   coffee-rails
   devise
