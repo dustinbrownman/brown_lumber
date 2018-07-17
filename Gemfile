@@ -14,7 +14,6 @@ gem 'devise'
 gem 'paperclip'
 gem 'bootstrap-wysihtml5-rails', :git => 'https://github.com/dustinbrownman/bootstrap-wysihtml5-rails.git'
 gem 'font-awesome-rails'
-gem 'capistrano'
 
 group :development, :test do
   gem 'rspec-rails'
@@ -24,6 +23,10 @@ end
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
+  gem 'capistrano'
+  gem 'capistrano-bundler'
+  gem 'capistrano-rvm'
+  gem 'capistrano-rails'
 end
 
 group :test do

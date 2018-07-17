@@ -7,6 +7,15 @@
 # server "example.com", user: "deploy", roles: %w{app web}, other_property: :other_value
 # server "db.example.com", user: "deploy", roles: %w{db}
 
+set :environment, "production"
+set :rails_env, "production"
+set :user_environment, "dustinbrownman"
+set :tmp_dir, "/home/dustinbrownman/deploy_tmp"
+
+set :deploy_to, "/home/dustinbrownman/dustinbrownman.com"
+
+server "ps602026.dreamhostps.com", user: "dustinbrownman", roles: %w{app db web}
+
 
 
 # role-based syntax
