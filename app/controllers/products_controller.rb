@@ -36,6 +36,6 @@ private
 
 	def product_params
 		params.require(:product).permit(:description, :part_number, :barcode_number,
-																		:units, :weight, :length)
+																		:units, :weight, :length, :brand)
 	end
 end
