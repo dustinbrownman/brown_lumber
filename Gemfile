@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 ruby "2.5.1"
 
-gem 'rails'
+gem 'rails', '6.0.1'
 gem 'mysql2'
 gem 'sass-rails'
 gem 'uglifier'
@@ -30,6 +30,7 @@ group :development do
   gem 'capistrano-bundler'
   gem 'capistrano-rvm'
   gem 'capistrano-rails'
+  gem 'listen'
 end
 
 group :test do
