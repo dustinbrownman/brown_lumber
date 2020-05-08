@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+ruby "2.5.1"
+
 gem 'rails'
 gem 'mysql2'
 gem 'sass-rails'
@@ -14,6 +16,7 @@ gem 'devise'
 gem 'paperclip'
 gem 'bootstrap-wysihtml5-rails', :git => 'https://github.com/dustinbrownman/bootstrap-wysihtml5-rails.git'
 gem 'font-awesome-rails'
+gem 'capybara'
 
 group :development, :test do
   gem 'rspec-rails'
@@ -31,7 +34,6 @@ end
 
 group :test do
   gem 'shoulda-matchers'
-  gem 'capybara'
   gem 'factory_girl_rails'
   gem 'launchy'
 end
