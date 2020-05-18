@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 ruby "2.5.1"
 
-gem 'rails', '6.0.1'
+gem 'rails', '6.0.3'
 gem 'mysql2'
 gem 'sass-rails'
 gem 'uglifier'
@@ -17,6 +17,7 @@ gem 'paperclip'
 gem 'bootstrap-wysihtml5-rails', :git => 'https://github.com/dustinbrownman/bootstrap-wysihtml5-rails.git'
 gem 'font-awesome-rails'
 gem 'capybara'
+gem 'webpacker'
 
 group :development, :test do
   gem 'rspec-rails'
